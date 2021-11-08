@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+  <meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><style>/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id,
+pre .coffeescript .params,
+pre .scss .preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49722053-1', 'inria.fr');
+  ga('send', 'pageview');
+
+</script>
+<title>Investigating the tangible construction of visual representations</title></head>
+<body><h1 id="investigating-the-tangible-construction-of-visual-representations">Investigating the tangible construction of visual representations</h1>
+<p><img alt="Teaser" src="images/teaser1.png" /></p>
+<p>
+   <a href="#abstract">Abstract </a> |
+   <a href="#vp">Visualizations </a> | 
+   <a href="#videos"> Videos </a> | 
+   <a href="#ressources">Ressources </a> | 
+<!--   <a href="#Acknowledgement">Acknowledgement </a> |  -->
+   <a href="#Copyright">Copyright</a> 
+</p>
+<b style="color:red"> 
+- PLEASE DON'T SHARE THIS URL UNTIL THE PAPER IS PUBLISH -<br>
+This page contains additional material for facilitating the re-analysis, meta-analysis, and replication of our study. If you have questions, feel free to e-mail us.  
+</b>
+<h2 id="abstract">Abstract</h2>
+<p>The accessibility of infovis authoring tools to a wide audience has been identified as one of the major research challenges. A key task of the authoring process is the development of visual mappings. While the infovis community has long been deeply interested in finding effective visual mappings, comparatively little attention has been placed on how people construct visual mappings. In this paper we present the results of a study designed to shed light on how people spontaneously transform data into visual representations. We asked people to create, update and explain their own information visualizations using simple materials such as tangible building blocks. We learned that all participants, most of whom had no experience in visualization, were readily able to create and talk about their own visualizations. On the basis of our observations, we discuss the actions of our participants in the context of the development of their visual representations and their analytic activities. From this we suggest implications for tool design that can enable broader support for infovis authoring.</p>
+
+<h2 id="vp">Visual representations produced by participants</h2>
+<p><img alt="All Visual representations produced by participant" src="images/teaser2.png" /></p>
+
+<h2 id="videos">Videos</h2>
+<p>All this video are speed up by 8.</p>
+<h3 id="participant-1">Participant 1</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/sV9bEJOjFEk?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/sV9bEJOjFEk?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-2">Participant 2</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/PFdYEpNwJSs?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/PFdYEpNwJSs?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-3">Participant 3</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/LPIP23ojEwk?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/LPIP23ojEwk?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-4">Participant 4</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/Zxjk6X-ssi0?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Zxjk6X-ssi0?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-5">Participant 5</h3>
+<p>Participant 5 doesn't wanted to be video taped.</p>
+<h3 id="participant-6">Participant 6</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/AJLpXGowQb8?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/AJLpXGowQb8?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-7">Participant 7</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/RLkzvFQ9kOM?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/RLkzvFQ9kOM?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-8">Participant 8</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/zE6sJ23-_Z4?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/zE6sJ23-_Z4?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-9">Participant 9</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/gfm7qfV3ktI?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/gfm7qfV3ktI?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-10">Participant 10</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/O6dhSWjxJ9I?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/O6dhSWjxJ9I?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-11">Participant 11</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/eOMEPLjgHyc?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eOMEPLjgHyc?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+<h3 id="participant-12">Participant 12</h3>
+<p><object width="720" height="250"><param name="movie" value="http://www.youtube.com/v/2stEgKqix4w?hl=fr_FR&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/2stEgKqix4w?hl=fr_FR&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="720" height="250" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+
+<h2 id="ressources">Ressources</h2>
+<ul>
+
+
+<li>
+<p><b>Video</b> coding and annotations:</p>
+<ul>
+<li><a href="videos.html" >Videos of participants process</a></li>
+<li>Videos with annotations (coming soon)</li>
+<li>Element for coding (coming soon)</li>
+<!--<li><a href="#">Analysis program</a> (coming soon)</li>
+<li>Analysis output (coming soon)</li>
+<li>Data For visualization (coming soon)</li>
+<li>Manual counting (coming soon)</li>-->
+</ul>
+</li>
+
+<li>
+<p>Visualization result: </p>
+<ul>
+<li>Photographies (coming soon)</li>
+<li>Mosaics (coming soon)</li>
+<li>Affinity diagram (coming soon)</li>
+<li>Pdf generator (coming soon)</li>
+<li>HD version of all visualization (coming soon)</li>
+</ul>
+</li>
+
+<li>
+<p>Usefull Elements: </p>
+<ul>
+<li><a href="https://github.com/cybunk/Kindergarten-open-gifts/blob/master/tangible-square-printable-model.stl" target="_blank">Token Open Source 3d model</a></li>
+<li><a href="images/20131219_184635-dataset.jpg" target="_blank">Picture of the printed version</a> </li>
+<li>Digital version of the dataset (coming soon)</li>
+<li>Editable figures (coming soon)</li>
+</ul>
+</li>
+
+
+
+<li>
+<p>Instructions:</p>
+<ul>
+<li>Instructions for facilitator (coming soon)</li>
+<li>Instructions for participant (coming soon)</li>
+</ul>
+</li>
+
+<li>
+<p>Formulaire:</p>
+<ul>
+<li>Pre session form  (coming soon)</li>
+<li>Post session form (coming soon)</li>
+<li>Formulaire Synthesis (coming soon)</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h2 id="acknowledgement">Acknowledgement</h2>
+(coming soon)
+<!--
+<p>This work was forged at <a href="http://www.iri.centrepompidou.fr/"> IRI Pompidou center </a>, <a href="http://innovis.cpsc.ucalgary.ca/"> Innovis (University of Calgary)</a> and <a href="http://aviz.fr/"> INRIA - AVIZ</a>. </p>
+<p>We want to especially thanks <a href="http://anrt.asso.fr/">ANRT</a> for their funding and the 
+<a href="http://cri-paris.org/">CRI</a> as well as <a href="http://fabelier.org/">Fabelier</a>  for hosting the experiement and providing the materials for it.</p>
+<p>Also thanks Michael Maurer for the dataset and Kyle, Pierre Dragicevic for their advices.</p>
+-->
+<h2 id="copyright">Copyright</h2>
+<p>All this work is under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">creative commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</a>. Copryright 2014 <a href="http://www.aviz.fr/Research/Huron">Samuel Huron</a>, <a href="http://www.aviz.fr/Research/Jansen">Yvonne Jansen</a>, <a href="http://pages.cpsc.ucalgary.ca/~sheelagh/">Sheelagh Carpendale </a></p></body></html>

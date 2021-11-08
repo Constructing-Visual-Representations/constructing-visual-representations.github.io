@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+
+<div id"loadExternal"></div>
+<script>
+	$('#loadExternal').click(function() { 
+	    var svg = $('#svgload').svg('get'); 
+	    svg.load($('#loadURL').val(), {addTo: $('#addTo')[0].checked, 
+	        changeSize: false, onLoad: loadDone}); 
+	    resetSize(svg); 
+	}); 
+	 
+	/* Callback after loading external document */ 
+	function loadDone(svg, error) { 
+	    svg.text(10, 20, error || 'Loaded into ' + this.id); 
+	}
+</script>
+
+</body>
+</html>

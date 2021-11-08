@@ -1,0 +1,4 @@
+AuthUserFile /home/groups/constructive/htdocs/.htpasswd
+AuthType Basic
+AuthName "Need password"
+Require valid-user

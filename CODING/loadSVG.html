@@ -1,0 +1,48 @@
+<html>
+<head></head>
+ <script src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/svg-master/jquery.svg.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+  		console.log($("svgembed"))
+
+  });
+</script>
+
+<body>
+<!--	
+<script>
+function svgloaded() {
+	console.log("test");
+	var svgEmbed = document.querySelector("#svgembed");
+	var svg = svgEmbed.getSVGDocument();
+
+	var td = svg.getElementById("textBlock");
+	td.textContent = "Foo";
+
+	var gn = svg.getElementById("greenBlock");
+	gn.setAttribute("fill", "#ff0000");
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+	var svgEmbed = document.querySelector("#svgembed");
+	svgEmbed.addEventListener("load", svgloaded);
+	console.log()
+
+},false);
+
+</script>
+-->
+
+
+
+ici <br/>
+<object data="images/flow-chart-1-session1-task1.svg" id="svgembed"></object>
+
+
+</body>
+</html>
