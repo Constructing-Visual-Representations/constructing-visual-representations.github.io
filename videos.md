@@ -2,7 +2,7 @@
 
 [Setup](setup.md)
 [Video](videos.md)
-[Photography](photography.md)
+[Photography](photographies.md)
 [Questionnaires](questionnaires.md)
 [Analysis](analysis.md)
 [Ressources](ressources.md)
