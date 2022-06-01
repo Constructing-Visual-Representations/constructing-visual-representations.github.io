@@ -1,7 +1,16 @@
+## Navigation 
+
+[Setup](setup.md)
+[Video](videos.md)
+[Photography](photographies.md)
+[Questionnaires](questionnaires.md)
+[Analysis](analysis.md)
+[Additional Materials](additional.md)
+[Paper](paper.md)
+[About](about.md)
 # Paper 
 
-Warning: PLEASE DON'T SHARE THIS URL UNTIL THE PAPER IS PUBLISH 
-
+The paper is available here : https://hal.inria.fr/hal-01024053
 
 ## Submission 
 
@@ -13,13 +22,13 @@ He will be available here if it's accepted.
 Note: Coming soon !
 
 
-<!--
+
 ## See also: 
 
 [Constructive Visualization](http://hal.inria.fr/index.php?action_todo=search&view_this_doc=hal-00978437&version=1&halsid=o61js94da8749nrctsmst1t3e2) by Samuel Huron Sheelagh Carpendale, Alice Thudt, Anthony Tang, Michael Mauerer Submit at DIS 2014
 
 
-
+<!--
 ## Previous paper by same authors on closes thematics
 
  * On construction paradygme by Samuel Huron 
