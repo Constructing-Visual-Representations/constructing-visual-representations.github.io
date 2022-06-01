@@ -1,3 +1,15 @@
+## Navigation 
+
+[Setup](setup.md)
+[Video](videos.md)
+[Photography](photographies.md)
+[Questionnaires](questionnaires.md)
+[Analysis](analysis.md)
+[Ressources](ressources.md)
+[Previous work](previouswork.md)
+[Additional Materials](additional.md)
+[Paper](paper.md)
+[About](about.md)
 # Questionnaires & Interviews Summary 
 
 Hint: This figures are some custom version of Bertin's Matrice done with the help of  <a href="http://www.bertifier.com/" target="_blank">Bertifier online tool</a>. This tool was published by <a href="http://www.aviz.fr/bertifier" target="_blank">Charle Perin, Pierre Dragicevic and Jean Daniel Fekete</a>  !
