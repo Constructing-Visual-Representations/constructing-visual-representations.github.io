@@ -1,3 +1,16 @@
+## Navigation 
+
+[Setup](setup.md)
+[Video](videos.md)
+[Photography](photographies.md)
+[Questionnaires](questionnaires.md)
+[Analysis](analysis.md)
+[Ressources](ressources.md)
+[Previous work](previouswork.md)
+[Additional Materials](additional.md)
+[Paper](paper.md)
+[About](about.md)
+
 # Photographies 
 
 ![All visualization produce by participant](images/teaser2.png)
