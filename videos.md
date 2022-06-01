@@ -1,3 +1,17 @@
+## Navigation 
+
+[Setup](setup.md)
+[Video](videos.md)
+[Photography](photography.md)
+[Questionnaires](questionnaires.md)
+[Analysis](analysis.md)
+[Ressources](ressources.md)
+[Previous work](previouswork.md)
+[Additional Materials](additional.md)
+[Paper](paper.md)
+[About](about.md)
+
+
 # Videos 
 
 Note: All this video are speed up by 8.
